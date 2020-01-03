@@ -1,6 +1,7 @@
 const express = require('express');
 const expressLayouts = require('express-ejs-layouts');
 const mongoose = require('mongoose');
+// const User = require('../models/User');
 
 const app = express();
 
@@ -18,6 +19,7 @@ mongoose.connect(db, { useNewUrlParser: true})
 app.use(expressLayouts);
 app.set('view engine', 'ejs');
 
+// Bodyparser
 app.use(express.urlencoded({ extended: true }));
 
 // Router
